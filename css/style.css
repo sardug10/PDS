@@ -57,7 +57,7 @@ body {
   border: 1px solid #EDEBEB;
   outline: none;
   cursor: pointer;
-  background-color: #007BE5;
+  background-color: #00315c;
   color: #EDEBEB;
 }
 
@@ -96,11 +96,12 @@ body {
 .header__sticky {
   padding: 5px 10rem;
   background-color: #EDEBEB;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 49, 92, 0.5);
+          box-shadow: 0px 3px 5px rgba(0, 49, 92, 0.5);
 }
 
 .header__logo {
   height: 7.5rem;
-  margin-right: 50rem;
 }
 
 .header__list {
@@ -123,7 +124,7 @@ body {
 
 .header__link {
   font-size: 1.8rem;
-  color: #007BE5;
+  color: #00315c;
   font-weight: 700;
   text-decoration: none;
 }
@@ -138,7 +139,7 @@ body {
 
 .header__heading {
   font-size: 7rem;
-  color: #007BE5;
+  color: #00315c;
   margin-bottom: 5rem;
   text-transform: capitalize;
   line-height: 8rem;
@@ -149,8 +150,7 @@ body {
   text-decoration: none;
   font-size: 1.6rem;
   padding: 1rem 1.5rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#007BE5), color-stop(51%, #6F479F), to(#007BE5));
-  background-image: linear-gradient(to right, #007BE5 0%, #6F479F 51%, #007BE5 100%);
+  background-color: #00315c;
   color: #fcfcfc;
   border-radius: .5rem;
   background-size: 200% auto;
@@ -184,9 +184,119 @@ body {
   filter: grayscale(100%);
 }
 
+.about {
+  height: 100vh;
+  padding: 7.5rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 32, 32, 0.75))), url("/images/about-us-bg.jpg");
+  background-image: linear-gradient(to bottom right, rgba(32, 32, 32, 0.75)), url("/images/about-us-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.about__heading {
+  margin-top: 5rem;
+  font-size: 8rem;
+  color: #EDEBEB;
+}
+
+.about__para {
+  margin-top: 2.5rem;
+  font-size: 1.6rem;
+  color: #fcfcfc;
+  line-height: 3rem;
+}
+
+.data {
+  padding: 5rem;
+}
+
+.data__heading {
+  margin-left: 2.2rem;
+  font-size: 2.2rem;
+  color: #00315c;
+}
+
+.data__div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.2rem 0;
+  padding: 1.5rem;
+}
+
+.data__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #202020;
+}
+
+.data__numbers {
+  display: inline-block;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.data__text {
+  font-size: 1.6rem;
+}
+
+.info {
+  height: 100vh;
+  padding: 5rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 32, 32, 0.85))), url("/images/about-next-bg.jpg");
+  background-image: linear-gradient(to right bottom, rgba(32, 32, 32, 0.85)), url("/images/about-next-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.info__para {
+  margin-top: 2.5rem;
+  font-size: 1.6rem;
+  color: #fcfcfc;
+  line-height: 3rem;
+}
+
+.info__cta {
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 1rem 1.5rem;
+  background-color: #00315c;
+  color: #fcfcfc;
+  border-radius: .5rem;
+  background-size: 200% auto;
+  -webkit-box-shadow: 0 0 20px #eee;
+          box-shadow: 0 0 20px #eee;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  display: inline-block;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-top: 3.5rem;
+}
+
+.info__cta:hover {
+  background-position: right center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
 .innovations {
   padding: 5rem 5rem 5rem 10rem;
-  background-color: #fcfcfc;
+  background-color: #EDEBEB;
   position: relative;
 }
 
@@ -216,7 +326,7 @@ body {
   font-size: 1.4rem;
   color: #202020;
   letter-spacing: 1.5px;
-  background-color: rgba(0, 123, 229, 0.2);
+  background-color: rgba(0, 49, 92, 0.2);
   padding: 1rem 4rem;
   margin-right: -6rem;
 }
@@ -239,7 +349,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 123, 229, 0.2);
+  background-color: rgba(0, 49, 92, 0.2);
 }
 
 .innovations .gallery__img {
@@ -256,7 +366,7 @@ body {
 }
 
 .sample {
-  padding: 15rem 7.5rem 7.5rem 7.5rem;
+  padding: 7.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,7 +377,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #EDEBEB;
-  margin-top: 5rem;
 }
 
 .sample__img {
@@ -281,23 +390,23 @@ body {
 }
 
 .sample__heading {
-  font-size: 4rem;
-  color: #007BE5;
+  font-size: 3.2rem;
+  color: #00315c;
   margin-bottom: 1.2rem;
 }
 
 .sample__para {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   letter-spacing: 1.2px;
   margin-bottom: 4rem;
+  text-align: justify;
 }
 
 .sample__cta {
   text-decoration: none;
   font-size: 1.6rem;
   padding: 1rem 1.5rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#007BE5), color-stop(51%, #6F479F), to(#007BE5));
-  background-image: linear-gradient(to right, #007BE5 0%, #6F479F 51%, #007BE5 100%);
+  background-color: #00315c;
   color: #fcfcfc;
   border-radius: .5rem;
   background-size: 200% auto;
@@ -327,8 +436,8 @@ body {
   width: 100%;
   font-size: 3rem;
   color: #fcfcfc;
-  background: -webkit-gradient(linear, left top, right top, from(#007BE5), to(#6F479F));
-  background: linear-gradient(to right, #007BE5, #6F479F);
+  background: -webkit-gradient(linear, left top, right top, from(#00315c));
+  background: linear-gradient(to right, #00315c);
 }
 
 .verticals__heading--sub {
@@ -359,13 +468,13 @@ body {
 .getInTouch {
   padding: 5rem;
   text-align: center;
-  background-color: rgba(0, 123, 229, 0.2);
+  background-color: rgba(0, 49, 92, 0.2);
 }
 
 .getInTouch__heading {
   font-size: 2.8rem;
-  background: -webkit-gradient(linear, right top, left top, from(#007BE5));
-  background: linear-gradient(to left, #007BE5);
+  background: -webkit-gradient(linear, right top, left top, from(#00315c));
+  background: linear-gradient(to left, #00315c);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -384,7 +493,7 @@ body {
   width: 30rem;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  background-color: rgba(0, 123, 229, 0.5);
+  background-color: rgba(0, 49, 92, 0.5);
   color: #fcfcfc;
 }
 
@@ -412,8 +521,7 @@ body {
   text-decoration: none;
   font-size: 1.6rem;
   padding: 1rem 1.5rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#007BE5), color-stop(51%, #6F479F), to(#007BE5));
-  background-image: linear-gradient(to right, #007BE5 0%, #6F479F 51%, #007BE5 100%);
+  background-color: #00315c;
   color: #fcfcfc;
   border-radius: .5rem;
   background-size: 200% auto;
@@ -422,8 +530,8 @@ body {
   -webkit-transition: all .3s;
   transition: all .3s;
   border: none;
-  background: -webkit-gradient(linear, right top, left top, from(#007BE5));
-  background: linear-gradient(to left, #007BE5);
+  background: -webkit-gradient(linear, right top, left top, from(#00315c));
+  background: linear-gradient(to left, #00315c);
 }
 
 .getInTouch__btn:hover {
@@ -433,7 +541,7 @@ body {
 }
 
 .footer {
-  background-color: rgba(0, 123, 229, 0.5);
+  background-color: rgba(0, 49, 92, 0.5);
   padding: 5rem;
 }
 
@@ -460,7 +568,7 @@ body {
 
 .footer__heading {
   font-size: 1.8rem;
-  color: #007BE5;
+  color: #00315c;
   font-weight: 700;
 }
 
@@ -475,11 +583,11 @@ body {
 .footer__links {
   text-decoration: none;
   font-size: 1.4rem;
-  color: #007BE5;
+  color: #00315c;
 }
 
 .copyright {
-  background-color: #007BE5;
+  background-color: #00315c;
   text-align: center;
   padding: 1rem 0;
   font-size: 1.6rem;
