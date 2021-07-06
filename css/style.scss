@@ -231,7 +231,7 @@ body {
 .about{
   height: 100vh;
   padding: 7.5rem;
-  background-image: linear-gradient(to bottom right, rgba($color-black,.75)), url('./images/about-us-bg.jpg');
+  background-image: linear-gradient(to bottom right, rgba($color-black,.75)), url('../images/about-us-bg.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -288,7 +288,7 @@ body {
 .info{
     height: 100vh;
     padding: 5rem;
-    background-image: linear-gradient(to right bottom, rgba($color-black,.85)), url('./images/about-next-bg.jpg');
+    background-image: linear-gradient(to right bottom, rgba($color-black,.85)), url('../images/about-next-bg.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
