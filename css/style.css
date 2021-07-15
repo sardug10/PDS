@@ -54,7 +54,7 @@ body {
   display: inline-block;
   padding: 1.2rem;
   border-radius: 10px;
-  border: 1px solid #EDEBEB;
+  border: none;
   outline: none;
   cursor: pointer;
   background-color: #00315c;
@@ -592,5 +592,130 @@ body {
   padding: 1rem 0;
   font-size: 1.6rem;
   color: #fcfcfc;
+}
+
+.mission {
+  padding: 7.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mission__div {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.mission__heading {
+  font-size: 4.4rem;
+  font-weight: 300;
+  color: #00315c;
+  margin-bottom: 1.2rem;
+}
+
+.mission__para {
+  font-size: 1.6rem;
+  letter-spacing: 1.2px;
+}
+
+.products {
+  padding: 7.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.products__product {
+  padding: 5rem;
+  text-align: center;
+  border: 3px solid #EDEBEB;
+  width: 40%;
+  height: 52rem;
+  -webkit-transition: .25s all ease-in-out;
+  transition: .25s all ease-in-out;
+  margin: 3rem 0;
+}
+
+.products__product:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: .25s all ease-in-out;
+  transition: .25s all ease-in-out;
+}
+
+.products__img {
+  height: 30rem;
+}
+
+.products__name {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #00315c;
+  margin: 1.2rem 0;
+}
+
+.products__features {
+  font-size: 1.25rem;
+  color: #202020;
+  text-transform: capitalize;
+}
+
+.products__feature:not(:last-child) {
+  margin-bottom: .75rem;
+}
+
+.details {
+  padding: 10rem;
+  text-align: center;
+}
+
+.details__heading {
+  font-size: 2.2rem;
+  color: #00315c;
+}
+
+.details__address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+}
+
+.details__address--para {
+  font-size: 1.8rem;
+  color: #202020;
+}
+
+.partnerships {
+  padding: 10rem;
+  text-align: center;
+}
+
+.partnerships__heading {
+  font-size: 2.4rem;
+  color: #00315c;
+}
+
+.partnerships__img {
+  height: 40rem;
 }
 /*# sourceMappingURL=style.css.map */
