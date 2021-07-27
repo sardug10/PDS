@@ -252,17 +252,8 @@ body {
         line-height: 8rem;
         letter-spacing: 2.5px;
 
-        @include respond(s-hundred){
-          font-size: 8rem;
-          line-height: 8rem;
-        }
-
         &--about{
           font-size: 8.5rem;
-          @include respond(s-hundred){
-            font-size: 10rem;
-            line-height: 10rem;
-          }
         }
     }
 
