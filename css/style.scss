@@ -235,7 +235,7 @@ body {
 
        @include respond(s-hundred){
          top: 45%;
-         left: 35%;
+         left: 40%;
        }
 
        @include respond(small-phone){
@@ -253,8 +253,8 @@ body {
         letter-spacing: 2.5px;
 
         @include respond(s-hundred){
-          font-size: 6rem;
-          line-height: 6.5rem;
+          font-size: 8rem;
+          line-height: 8rem;
         }
     }
 
@@ -288,9 +288,6 @@ body {
             }
             @include respond(phone){
               height: 40rem;
-            }
-            @include respond(f-hundred){
-              height: 35rem;
             }
         }
     }

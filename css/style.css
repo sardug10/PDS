@@ -198,7 +198,7 @@ body {
 @media only screen and (max-width: 43.75em) {
   .header__hero {
     top: 45%;
-    left: 35%;
+    left: 40%;
   }
 }
 
@@ -220,8 +220,8 @@ body {
 
 @media only screen and (max-width: 43.75em) {
   .header__heading {
-    font-size: 6rem;
-    line-height: 6.5rem;
+    font-size: 8rem;
+    line-height: 8rem;
   }
 }
 
@@ -278,12 +278,6 @@ body {
 @media only screen and (max-width: 37.5em) {
   .header__img--side {
     height: 40rem;
-  }
-}
-
-@media only screen and (max-width: 31.25em) {
-  .header__img--side {
-    height: 35rem;
   }
 }
 
