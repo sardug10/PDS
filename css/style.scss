@@ -352,6 +352,7 @@ body {
     list-style: none;
     opacity: 0;
     visibility: hidden;
+    margin-top: 50%;
   }
 
   &__item {
@@ -462,6 +463,10 @@ body {
     margin-top: 5rem;
     font-size: 8rem;
     color: $color-gray;
+
+    @include respond(phone){
+      margin-top: 2.5rem;
+    }
   }
 
   &__para{
@@ -508,17 +513,24 @@ body {
 }
 
 .info{
-    height: 100vh;
+    height: auto;
     padding: 5rem;
     background-image: linear-gradient(to right bottom, rgba($color-black,.85)), url('../images/about-next-bg.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
+
+    @include respond(phone){
+      padding: 2.5rem;
+    }
   &__para{
     margin-top: 2.5rem;
     font-size: 1.6rem;
     color: $color-white;
     line-height: 3rem;
+    @include respond(phone){
+      margin-top: 1.5rem
+    }
   }
 
   &__cta{
@@ -534,22 +546,43 @@ body {
     background-color: $color-gray;
     position: relative;
 
+    @include respond(phone){
+      padding: 3rem;
+    }
+    @include respond(small-phone){
+      padding: 1.5rem;
+    }
+
     &__innovations{
       display: flex;
       align-items: center;
       margin: 0 auto;
       margin-top: -5rem;
+      @include respond(phone){
+        margin-top: 2rem;
+        display: block;
+        width: 90%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     &__heading{
       font-size: 5rem;
       font-weight: 700;
       color: $color-black;
+      @include respond(phone){
+        text-align: center;
+      }
     }
 
     &__content{
         text-align: left;
         width: 60%;
+        @include respond(phone){
+          width: 100%;
+          text-align: center;
+        }
     }
 
     &__para{
@@ -559,10 +592,24 @@ body {
         background-color: rgba($color-blue,.2);
         padding: 1rem 4rem;
         margin-right: -6rem;
+
+        @include respond(phone){
+          padding: 1rem 2.5rem;
+          margin-right: 0;
+        }
+        @include respond(small-phone){
+          padding: 1 1.5rem;
+        }
     }
 
     &__img{
         height: 40rem;
+        @include respond(e-hundred){
+          height: 37.5rem;
+        }
+        @include respond(phone){
+          display: none;
+        }
     }
 
     .gallery{
@@ -624,6 +671,9 @@ body {
 .verticals{
     padding: 5rem;
     text-align: center;
+    @include respond(phone){
+      padding: 2.5rem;
+    }
     &__heading{
         text-transform: capitalize;
         &--main{
@@ -730,6 +780,19 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    @include respond(phone){
+      flex-direction: column;
+    }
+  }
+
+  &__div{
+    @include respond(phone){
+      &:last-child{
+        margin-top: 2.5rem;
+        margin-left: 10rem;
+      }
+    }
   }
 
   &__heading{
