@@ -195,6 +195,12 @@ body {
           transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 50em) {
+  .header__hero--partnership {
+    margin-left: 2.5rem;
+  }
+}
+
 @media only screen and (max-width: 43.75em) {
   .header__hero {
     top: 45%;
@@ -220,6 +226,18 @@ body {
 
 .header__heading--about {
   font-size: 8.5rem;
+}
+
+.header__heading--partnership {
+  margin-left: 2.5rem;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .header__heading--partnership {
+    font-size: 5rem;
+    margin-left: 0;
+    margin-right: 1.2rem;
+  }
 }
 
 .header__cta {
@@ -1164,5 +1182,20 @@ body {
 
 .partnerships__img {
   height: 40rem;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .partnerships__img {
+    height: 35rem;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .partnerships__img {
+    height: 30rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
