@@ -354,6 +354,11 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.navigation__logo {
+  height: 10rem;
+  margin-top: 15rem;
+}
+
 .navigation__link {
   text-decoration: none;
   color: #fcfcfc;

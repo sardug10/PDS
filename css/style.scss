@@ -361,6 +361,11 @@ body {
     }
   }
 
+  &__logo{
+    height: 10rem;
+    margin-top: 15rem;
+  }
+
   &__link {
     text-decoration: none;
     color: $color-white;
