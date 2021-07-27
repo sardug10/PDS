@@ -5,6 +5,12 @@ $color-gray:#EDEBEB;
 $color-white:#fcfcfc;
 
 @mixin respond($breakpoint) {
+    @if $breakpoint == small-phone {
+      @media only screen and (max-width: 25em) {
+        @content;
+      } //400px
+    }
+
     @if $breakpoint == f-hundred {
       @media only screen and (max-width: 31.25em) {
         @content;
@@ -58,7 +64,6 @@ $color-white:#fcfcfc;
     text-decoration: none;
     font-size: 1.6rem;
     padding: 1rem 1.5rem;
-    // background-image: linear-gradient(to right, $color-blue 0%, $color-purple 51%, $color-blue 100%);
     background-color: $color-blue;
     color: $color-white;
     border-radius: .5rem;
@@ -99,8 +104,18 @@ html {
   }
 }
 
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+
 body {
   font-family: 'Poppins', sans-serif;
+  // overflow: hidden;
 
   @include respond(thousand) {
     padding: 0;
@@ -151,6 +166,19 @@ body {
         z-index: 100;
         width: 100%;
         transition: .6s;
+
+        @include respond(thousand){
+          padding: 3.5rem 7.5rem;
+        }
+        @include respond(e-hundred){
+          padding: 3.5rem 6rem;
+        }
+        @include respond(s-hundred){
+          justify-content: space-between !important;
+        }
+        @include respond(phone){
+          padding: 3rem 4rem;
+        }
     }
 
     &__sticky{
@@ -162,16 +190,29 @@ body {
 
     &__logo{
         height: 7.5rem;
+
+        @include respond(e-hundred){
+          height: 6.5rem;
+        }
+        @include respond(s-hundred){
+          justify-self: start;
+        }
     }
 
     &__list{
         list-style: none;
         display: flex;
+        @include respond(s-hundred){
+          display: none;
+        }
     }
 
     &__item{
         &:not(:last-child){
             margin-right: 5rem;
+            @include respond(e-hundred){
+              margin-right: 4rem;
+            }
         }
         &:hover{
             transform: scale(1.2);
@@ -192,10 +233,15 @@ body {
         left: 25%;
         transform: translate(-50%,-50%);
 
-        // &--about{
-        //   top: 65%;
-        //   left: 35%;
-        // }
+       @include respond(s-hundred){
+         top: 45%;
+         left: 35%;
+       }
+
+       @include respond(small-phone){
+        top: 40%;
+        left: 50%;
+      }
     }
 
     &__heading{
@@ -205,6 +251,11 @@ body {
         text-transform: capitalize;
         line-height: 8rem;
         letter-spacing: 2.5px;
+
+        @include respond(s-hundred){
+          font-size: 6rem;
+          line-height: 6.5rem;
+        }
     }
 
     &__cta{
@@ -219,8 +270,10 @@ body {
             left: 50%;
             transform: translateX(-50%);
             opacity: 0.1;
-            // z-index: -10;
             height: 100vh;
+            @include respond(s-hundred){
+              display: none;
+            }
         }
 
         &--side{
@@ -229,8 +282,175 @@ body {
             right: 0;
             -webkit-filter: grayscale(100%);
                     filter: grayscale(100%);
+
+            @include respond(thousand){
+              height: 45rem;
+            }
+            @include respond(phone){
+              height: 40rem;
+            }
+            @include respond(f-hundred){
+              height: 35rem;
+            }
         }
     }
+}
+
+.navigation {
+  display: none;
+  @include respond(s-hundred){
+    display: block;
+  }
+  @include respond(phone){
+    margin-right: 1.2rem;
+  }
+  z-index: 2000;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: transparent;
+    height: 7rem;
+    width: 7rem;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__background {
+    background: radial-gradient(
+      rgba($color-blue, 1),
+      rgba($color-purple, 1)
+    );
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    top: -1rem;
+    right: 0rem;
+    z-index: -1000;
+    display: none;
+    border-radius: 50rem;
+  }
+
+  &__nav {
+    position: fixed;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    z-index: 1500;
+
+    @include respond(phone){
+      padding: 0;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-white;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  &__checkbox:checked ~ &__nav &__list {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+  }
+
+  &__checkbox:checked ~ &__background {
+    @include respond(s-hundred) {
+      display: block;
+      transform: scale(80);
+    }
+  }
+
+  &__checkbox:checked ~ &__nav {
+    @include respond(s-hundred) {
+      font-size: 4rem;
+      position: absolute;
+      top: 32rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__checkbox:checked ~ &__nav &__link {
+    @include respond(s-hundred) {
+      color: $color-white;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    margin-left: 2rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 4rem;
+      height: 2px;
+      background-color: $color-black;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.65rem;
+    }
+    &::after {
+      top: 0.65rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 }
 
 .about{
