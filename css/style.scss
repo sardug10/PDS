@@ -488,6 +488,9 @@ body {
     @include respond(phone){
       margin-top: 2rem;
     }
+    @include respond(small-phone){
+      font-size: 6rem;
+    }
   }
 
   &__para{
@@ -852,6 +855,10 @@ body {
 
   &__div{
     @include respond(phone){
+      &:first-child{
+        margin-right: 2.5rem;
+      }
+
       &:last-child{
         margin-top: 2.5rem;
         margin-left: 10rem;
@@ -919,11 +926,38 @@ body {
 }
 
 .products{
-  padding: 7.5rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
+
+  &__div{
+    padding: 7.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include respond(tab-land){
+      padding: 6.5rem;
+    }
+    @include respond(thousand){
+      padding: 5rem;
+    }
+    @include respond(tab-port){
+      padding: 4rem;
+    }
+    @include respond(e-hundred){
+      flex-direction: column;
+    }
+    @include respond(small-phone){
+      padding: 2.5rem;
+    }
+  }
+
+  &__heading{
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 5.2rem;
+    color: $color-blue;
+  }
+
   &__product{
     padding: 5rem;
     text-align: center;
@@ -933,6 +967,35 @@ body {
     transition: .25s all ease-in-out;
     margin: 3rem 0;
 
+    &--civilian{
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+    }
+
+    @include respond(tab-land){
+      padding: 3.5rem;
+    }
+    @include respond(thousand){
+      padding: 3rem;
+    }
+    @include respond(tab-port){
+      padding: 2.5rem;
+    }
+
+    @include respond(e-hundred){
+      width: 65%;
+    }
+    @include respond(phone){
+      width: 80%;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+    }
+    @include respond(small-phone){
+      width: 90%;
+    }
+
     &:hover{
       transform: scale(1.25);
       transition: .25s all ease-in-out;
@@ -941,6 +1004,9 @@ body {
 
   &__img{
     height: 30rem;
+    @include respond(small-phone){
+      height: 25rem;
+    }
   }
 
   &__name{
@@ -954,7 +1020,7 @@ body {
     font-size: 1.25rem;
     color: $color-black;
     text-transform: capitalize;
-    // list-style: none;
+    list-style: none;
   }
 
   &__feature{
@@ -977,6 +1043,21 @@ body {
     justify-content: space-around;
     align-items: center;
     margin: 2rem 0;
+
+    &--1{
+      @include respond(phone){
+        &:not(:last-child){
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+
+    @include respond(phone){
+      flex-direction: column;
+      &:not(:last-child){
+        margin-bottom: 2.5rem;
+      }
+    }
     &--para{
       font-size: 1.8rem;
       color: $color-black;
