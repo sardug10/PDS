@@ -927,6 +927,10 @@ body {
 
 .products{
 
+  &__link{
+    text-decoration: none;
+  }
+
   &__div{
     padding: 7.5rem;
     display: flex;
@@ -999,6 +1003,7 @@ body {
     &:hover{
       transform: scale(1.25);
       transition: .25s all ease-in-out;
+      background-color: $color-gray;
     }
   }
 
@@ -1066,22 +1071,61 @@ body {
 }
 
 .partnerships{
-  padding: 10rem;
+  height: auto;
+  margin: 3.5rem 0;
+  padding: 5rem;
+  background-image: linear-gradient(to bottom right, rgba($color-black,.85)), url('../images/partnership.jpg');
+  background-size: cover;
+  background-position: center;
   text-align: center;
+  
   &__heading{
-    font-size: 2.4rem;
-    color: $color-blue;
-  }
+    margin-top: 3rem;
+    font-size: 8rem;
+    color: $color-gray;
 
-  &__img{
-    height: 40rem;
-    margin-left: 50%;
-    transform: translateX(-50%);
     @include respond(phone){
-      height: 35rem;
+      margin-top: 2rem;
     }
     @include respond(small-phone){
-      height: 30rem;
+      font-size: 6rem;
     }
   }
+
+  &__para{
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+    color: $color-white;
+    line-height: 3rem;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
