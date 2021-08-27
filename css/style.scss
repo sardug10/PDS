@@ -1085,6 +1085,7 @@ body {
 
     @include respond(phone){
       margin-top: 2rem;
+      font-size: 6rem;
     }
     @include respond(small-phone){
       font-size: 5rem;
