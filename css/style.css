@@ -1353,6 +1353,12 @@ body {
   display: block;
 }
 
+@media only screen and (max-width: 43.75em) {
+  .dropdown-content a {
+    font-size: 1.6rem;
+  }
+}
+
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #f1f1f1;
