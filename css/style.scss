@@ -62,11 +62,11 @@ $color-white:#fcfcfc;
 
 @mixin cta {
     text-decoration: none;
-    font-size: 1.6rem;
-    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    padding: 1.5rem 2rem;
     background-color: $color-blue;
     color: $color-white;
-    border-radius: .5rem;
+    border-radius: 1rem;
     background-size: 200% auto;
     box-shadow: 0 0 20px #eee;
     transition: all .3s;
@@ -113,7 +113,8 @@ html,body
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  // font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   // overflow: hidden;
 
   @include respond(thousand) {
@@ -159,7 +160,7 @@ body {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        padding: 4rem 10rem;
+        padding: 4rem 5rem;
         justify-content: space-around !important;
         align-items: center;
         z-index: 100;
@@ -188,7 +189,7 @@ body {
     }
 
     &__logo{
-        height: 7.5rem;
+        height: 6.5rem;
 
         @include respond(e-hundred){
           height: 6.5rem;
@@ -213,17 +214,19 @@ body {
               margin-right: 4rem;
             }
         }
-        &:hover{
-            transform: scale(1.2);
-            transition: all .3s;
-        }
     }
 
     &__link{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         color: $color-blue;
-        font-weight: 700;
+        font-weight: 400;
         text-decoration: none;
+
+        &:hover{
+          // transform: scale(1.2);
+          font-weight: 600;
+          transition: all .3s;
+      }
     }
 
     &__hero{
@@ -473,15 +476,23 @@ body {
 
 .about{
   height: auto;
-  padding: 5rem;
+  padding: 5rem 15rem;
   background-image: linear-gradient(to bottom right, rgba($color-black,.75)), url('../images/about-us-bg.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
+
+  @include respond(phone){
+    padding: 3.5rem 10rem;
+  }
+
+  @include respond(small-phone){
+    padding: 3rem 7.5rem;
+  }
   
   &__heading{
     margin-top: 3rem;
-    font-size: 8rem;
+    font-size: 6.5rem;
     color: $color-gray;
 
     @include respond(phone){
@@ -494,7 +505,7 @@ body {
 
   &__para{
     margin-top: 2.5rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: $color-white;
     line-height: 3rem;
   }
@@ -549,7 +560,7 @@ body {
 
 .info{
     height: auto;
-    padding: 5rem;
+    padding: 5rem 15rem;
     background-image: linear-gradient(to right bottom, rgba($color-black,.85)), url('../images/about-next-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -560,7 +571,8 @@ body {
     }
   &__para{
     margin-top: 2.5rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 400;
     color: $color-white;
     line-height: 3rem;
     @include respond(phone){
@@ -603,8 +615,8 @@ body {
     }
 
     &__heading{
-      font-size: 5rem;
-      font-weight: 700;
+      font-size: 4rem;
+      font-weight: 600;
       color: $color-black;
       @include respond(phone){
         text-align: center;
@@ -613,7 +625,7 @@ body {
 
     &__content{
         text-align: left;
-        width: 60%;
+        width: 70%;
         @include respond(phone){
           width: 100%;
           text-align: center;
@@ -639,6 +651,7 @@ body {
 
     &__img{
         height: 40rem;
+        margin-left: 2rem;
         @include respond(e-hundred){
           height: 37.5rem;
         }
@@ -715,7 +728,7 @@ body {
     &__heading{
         font-size: 3.2rem;
         color: $color-blue;
-        margin-bottom: 1.2rem;
+        margin-bottom: 3rem;
 
         @include respond(phone){
           text-align: center;
@@ -743,8 +756,11 @@ body {
     &__heading{
         text-transform: capitalize;
         &--main{
-            width: 100%;
-            font-size: 3rem;
+            width: 95%;
+            padding: .8rem 0;
+            text-align: center;
+            margin: auto;
+            font-size: 2.8rem;
             color: $color-white;
             background: linear-gradient(to right, $color-blue);
         }
@@ -761,15 +777,22 @@ body {
         height: -webkit-fit-content;
         height: -moz-fit-content;
         height: fit-content;
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
-        margin: 1.5rem 0;
-        padding: 1.2rem;
+        // width: -webkit-fit-content;
+        // width: -moz-fit-content;
+        // width: fit-content;
+        width: 95%;
+        // margin: 1.5rem 0;
+        margin: auto;
+        padding: 2rem 10rem;
+        background-color: rgba($color-blue,.08);
+
+        @include respond(phone){
+          padding: 2rem 7.5rem;
+        }
     }
 
     &__para{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         letter-spacing: 1.2px;
         color: $color-black;
     }
@@ -784,7 +807,7 @@ body {
     background: linear-gradient(to left, $color-blue);
     -webkit-background-clip: text;
             background-clip: text;
-    color: transparent;
+    color: $color-white;
     display: inline-block;
   }
 
@@ -798,9 +821,9 @@ body {
     border: none;
     height: 3.5rem;
     width: 30rem;
-    padding: 1rem 2rem;
+    padding: 2rem;
     border-radius: 1rem;
-    background-color: rgba($color-blue,.5);
+    background-color: rgba($color-blue,.25);
     color: $color-white;
 
     &:focus{
@@ -832,19 +855,19 @@ body {
 }
 
 .footer{
-  background-color: rgba($color-blue,.5);
+  background-color: rgba($color-blue,.4);
   padding: 5rem;
   &__logo{
-    height: 10rem;
+    height: 7rem;
     margin-left: 50%;
     margin-top: 2.5rem;
     transform: translateX(-50%);
   }
 
   &__content{
-    padding: 2.5rem;
+    padding: 2.5rem 18rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
     @include respond(phone){
@@ -861,6 +884,15 @@ body {
       &:last-child{
         margin-top: 2.5rem;
         margin-left: 10rem;
+        // text-align: right;
+      }
+    }
+
+    &--second{
+      text-align: right;
+
+      @include respond(phone){
+        text-align: left;
       }
     }
   }
@@ -891,13 +923,13 @@ body {
 .copyright{
   background-color: $color-blue;
   text-align: center;
-  padding: 1rem 0;
-  font-size: 1.6rem;
+  padding: .5rem 0;
+  font-size: 1.2rem;
   color: $color-white;
 }
 
 .mission{
-  padding: 5rem;
+  padding: 5rem 12rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -912,14 +944,14 @@ body {
   }
 
   &__heading{
-    font-size: 4.4rem;
+    font-size: 3.4rem;
     font-weight: 300;
     color: $color-blue;
     margin-bottom: 1.2rem;
   }
 
   &__para{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     letter-spacing: 1.2px;
   }
 }
@@ -931,7 +963,7 @@ body {
   }
 
   &__div{
-    padding: 7.5rem;
+    padding: 3.5rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -956,8 +988,8 @@ body {
 
   &__heading{
     text-align: center;
-    margin-top: 2.5rem;
-    font-size: 5.2rem;
+    margin-top: 4.5rem;
+    font-size: 4.2rem;
     color: $color-blue;
   }
 
@@ -1000,7 +1032,7 @@ body {
     }
 
     &:hover{
-      transform: scale(1.25);
+      // transform: scale(1.25);
       transition: .25s all ease-in-out;
       background-color: $color-gray;
     }
@@ -1038,6 +1070,7 @@ body {
   padding: 10rem;
   text-align: center;
   &__heading{
+    margin-bottom: 1.5rem;
     font-size: 2.2rem;
     color: $color-blue;
   }
@@ -1072,15 +1105,23 @@ body {
 .partnerships{
   height: auto;
   margin: 3.5rem 0;
-  padding: 5rem;
+  padding: 5rem 15rem;
   background-image: linear-gradient(to bottom right, rgba($color-black,.85)), url('../images/partnership.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
+
+  @include respond(phone){
+    padding: 3.5rem 10rem;
+  }
+
+  @include respond(small-phone){
+    padding: 3rem 7.5rem;
+  }
   
   &__heading{
     margin-top: 3rem;
-    font-size: 8rem;
+    font-size: 6.5rem;
     color: $color-gray;
 
     @include respond(phone){
