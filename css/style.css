@@ -1260,6 +1260,10 @@ body {
   }
 }
 
+.products__img--helmet {
+  height: 22.5rem;
+}
+
 .products__name {
   text-transform: uppercase;
   font-size: 2rem;
@@ -1410,5 +1414,89 @@ body {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.armour {
+  padding: 7.5rem;
+  background-color: #fcfcfc;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .armour {
+    padding: 5rem;
+  }
+}
+
+.armour__heading {
+  text-align: center;
+  font-size: 4.5rem;
+  color: #202020;
+}
+
+.armour__div {
+  text-align: center;
+  margin: 2.5rem 0;
+  padding: 2.5rem;
+}
+
+.armour__img {
+  height: 20rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .armour__img {
+    height: 15rem;
+  }
+}
+
+.armour__features {
+  list-style: none;
+  margin-top: 1.8rem;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.armour__feature:not(:last-child) {
+  margin-bottom: .75rem;
+}
+
+.armour__secondiv {
+  margin: 2.5rem 0;
+  padding: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .armour__secondiv {
+    padding: 2rem;
+  }
+}
+
+.armour__pro {
+  text-align: center;
+  padding: 1.2rem;
+  margin: 2.5rem;
+}
+
+.armour__sechead {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #202020;
+}
+
+.armour__para {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.armour__para--red {
+  color: red;
 }
 /*# sourceMappingURL=style.css.map */

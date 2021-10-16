@@ -1043,6 +1043,10 @@ body {
     @include respond(small-phone){
       height: 25rem;
     }
+
+    &--helmet{
+      height: 22.5rem;
+    }
   }
 
   &__name{
@@ -1173,4 +1177,79 @@ body {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.armour{
+  padding: 7.5rem;
+  background-color: $color-white;
+
+  @include respond(phone){
+    padding: 5rem;
+  }
+  
+  &__heading{
+    text-align: center;
+    font-size: 4.5rem;
+    color: $color-black;
+  }
+
+  &__div{
+    text-align: center;
+    margin: 2.5rem 0;
+    padding: 2.5rem;
+  }
+
+  &__img{
+    height: 20rem;
+
+    @include respond(phone){
+      height: 15rem;
+    }
+  }
+
+  &__features{
+    list-style: none;
+    margin-top: 1.8rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+  }
+
+  &__feature{
+    &:not(:last-child){
+      margin-bottom: .75rem;
+    }
+  }
+
+  &__secondiv{
+    margin: 2.5rem 0;
+    padding: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond(phone){
+      padding: 2rem;
+    }
+  }
+
+  &__pro{
+    text-align: center;
+    padding: 1.2rem;
+    margin: 2.5rem;
+  }
+
+  &__sechead{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+
+  &__para{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+
+    &--red{
+      color: red;
+    }
+  }
 }
