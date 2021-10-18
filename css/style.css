@@ -1286,9 +1286,15 @@ body {
   }
 }
 
-@media only screen and (max-width: 25em) {
+@media only screen and (max-width: 37.5em) {
   .products__div {
     padding: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .products__div {
+    padding: .5rem;
   }
 }
 
@@ -1346,11 +1352,13 @@ body {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    padding: 1rem;
   }
 }
 
 @media only screen and (max-width: 25em) {
   .products__product {
+    padding: .5rem;
     width: 90%;
   }
 }
@@ -1365,14 +1373,38 @@ body {
   height: 30rem;
 }
 
-@media only screen and (max-width: 25em) {
+@media only screen and (max-width: 37.5em) {
+  .products__img {
+    height: 27.5rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
   .products__img {
     height: 25rem;
   }
 }
 
+@media only screen and (max-width: 25em) {
+  .products__img {
+    height: 22.5rem;
+  }
+}
+
 .products__img--helmet {
   height: 22.5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .products__img--helmet {
+    height: 15rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .products__img--helmet {
+    height: 10rem;
+  }
 }
 
 .products__name {

@@ -1052,8 +1052,11 @@ body {
     @include respond(e-hundred){
       flex-direction: column;
     }
-    @include respond(small-phone){
+    @include respond(phone){
       padding: 2.5rem;
+    }
+    @include respond(small-phone){
+      padding: .5rem;
     }
   }
 
@@ -1097,8 +1100,10 @@ body {
       height: -webkit-fit-content;
       height: -moz-fit-content;
       height: fit-content;
+      padding: 1rem;
     }
     @include respond(small-phone){
+      padding: .5rem;
       width: 90%;
     }
 
@@ -1111,12 +1116,31 @@ body {
 
   &__img{
     height: 30rem;
-    @include respond(small-phone){
+
+    @include respond(phone){
+      height: 27.5rem;
+    }
+
+    @include respond(f-hundred){
       height: 25rem;
+    }
+
+    @include respond(small-phone){
+      height: 22.5rem;
     }
 
     &--helmet{
       height: 22.5rem;
+
+      @include respond(phone){
+        height: 15rem;
+      }
+      @include respond(f-hundred){
+        height: 10rem;
+      }
+      // @include respond(small-phone){
+      //   height: 8.5rem;
+      // }
     }
   }
 
