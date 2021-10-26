@@ -1498,9 +1498,9 @@ body {
   color: #202020;
 }
 
-.partnerships {
+.services {
   height: auto;
-  margin: 3.5rem 0;
+  margin: 3.5rem 0 3.5rem 0;
   padding: 5rem 15rem;
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(32, 32, 32, 0.85))), url("../images/partnership.jpg");
   background-image: linear-gradient(to bottom right, rgba(32, 32, 32, 0.85)), url("../images/partnership.jpg");
@@ -1510,43 +1510,43 @@ body {
 }
 
 @media only screen and (max-width: 37.5em) {
-  .partnerships {
+  .services {
     padding: 3.5rem 8rem;
   }
 }
 
 @media only screen and (max-width: 31.25em) {
-  .partnerships {
+  .services {
     padding: 3.5rem 2.5rem;
   }
 }
 
 @media only screen and (max-width: 25em) {
-  .partnerships {
+  .services {
     padding: 3rem .5rem;
   }
 }
 
-.partnerships__heading {
+.services__heading {
   margin-top: 3rem;
   font-size: 6.5rem;
   color: #EDEBEB;
 }
 
 @media only screen and (max-width: 37.5em) {
-  .partnerships__heading {
+  .services__heading {
     margin-top: 2rem;
     font-size: 6rem;
   }
 }
 
 @media only screen and (max-width: 25em) {
-  .partnerships__heading {
+  .services__heading {
     font-size: 5rem;
   }
 }
 
-.partnerships__para {
+.services__para {
   margin-top: 2.5rem;
   font-size: 1.6rem;
   color: #fcfcfc;
@@ -1554,9 +1554,164 @@ body {
 }
 
 @media only screen and (max-width: 37.5em) {
-  .partnerships__para {
+  .services__para {
     font-size: 1.8rem;
   }
+}
+
+.dpa {
+  height: auto;
+  margin-bottom: 3.5rem;
+}
+
+.dpa__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .dpa__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.dpa__container--reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .dpa__container--reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.dpa__details, .dpa__photo {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  position: relative;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .dpa__details, .dpa__photo {
+    width: 100%;
+  }
+}
+
+.dpa__photo--d {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 252, 252, 0.25)), to(rgba(252, 252, 252, 0.3))), url("../images/design-service.jpg");
+  background: linear-gradient(rgba(252, 252, 252, 0.25), rgba(252, 252, 252, 0.3)), url("../images/design-service.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dpa__photo--p {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 252, 252, 0.25)), to(rgba(252, 252, 252, 0.3))), url("../images/proto-service.jpg");
+  background: linear-gradient(rgba(252, 252, 252, 0.25), rgba(252, 252, 252, 0.3)), url("../images/proto-service.jpg");
+  background-size: cover;
+  background-position: left;
+}
+
+.dpa__photo--a {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(252, 252, 252, 0.5)), to(rgba(252, 252, 252, 0.5))), url("../images/assembly-service.jpg");
+  background: linear-gradient(rgba(252, 252, 252, 0.5), rgba(252, 252, 252, 0.5)), url("../images/assembly-service.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .dpa__photo {
+    height: 40rem;
+  }
+}
+
+.dpa__details {
+  background-color: #00315c;
+  color: #fcfcfc;
+  padding: 4rem 5rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .dpa__details {
+    padding: 4rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .dpa__details {
+    padding: 3rem;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .dpa__details {
+    padding: 2rem;
+  }
+}
+
+.dpa__heading {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 1rem 0;
+  margin: 1.2rem 0;
+  border-bottom: 2.5px solid #202020;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .dpa__heading {
+    padding: .5rem;
+    font-size: 1.7rem;
+  }
+}
+
+.dpa__para {
+  font-size: 1.45rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .dpa__para {
+    font-size: 1.4rem;
+  }
+}
+
+.dpa__list {
+  list-style: none;
+  font-size: 1.45rem;
+  margin-top: 2.5rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .dpa__list {
+    -webkit-columns: 2;
+            columns: 2;
+  }
+}
+
+.dpa__item:not(:last-child) {
+  margin-bottom: .75rem;
+}
+
+.dpa__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 4.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #00315c;
 }
 
 .dropdown {
