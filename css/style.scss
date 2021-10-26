@@ -694,7 +694,7 @@ body {
 
     &__img{
         height: 40rem;
-        margin-left: 2rem;
+        margin-left: -2rem;
         @include respond(e-hundred){
           height: 37.5rem;
         }

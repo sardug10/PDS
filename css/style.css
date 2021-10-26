@@ -793,7 +793,7 @@ body {
 
 .innovations__img {
   height: 40rem;
-  margin-left: 2rem;
+  margin-left: -2rem;
 }
 
 @media only screen and (max-width: 50em) {
